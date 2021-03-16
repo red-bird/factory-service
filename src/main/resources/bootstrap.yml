@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: factory-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+    bootstrap:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_SERVER_ADDR}:${EUREKA_SERVER_PORT}/eureka
