@@ -12,6 +12,14 @@ public class FactoryService {
     FactoryRepository factoryRepository;
 
     public Factory findByName(String name) {
-        factoryRepository.findByName(name);
+        return factoryRepository.findByName(name);
+    }
+    
+    public void deleteById(Long id) {
+        factoryRepository.deleteById(id);
+    }
+
+    public Factory saveFactory(Factory factory) {
+        return factoryRepository.save(factory);
     }
 }

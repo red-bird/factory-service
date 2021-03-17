@@ -6,6 +6,6 @@ import java.util.List;
 
 @Data
 public class FactoryDTO {
-    String name;
-    List<GoodInfo> goodInfoList;
+    String factoryName;
+    List<GoodInfoDTO> goodInfoDTOList;
 }

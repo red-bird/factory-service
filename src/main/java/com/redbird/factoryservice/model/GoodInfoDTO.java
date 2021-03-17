@@ -5,11 +5,10 @@ import lombok.Data;
 import javax.persistence.Entity;
 
 @Data
-@Entity
-public class GoodResponse {
+public class GoodInfoDTO {
+
     private String name;
     private String description;
-    private Long amount;
     private String shopName;
     private String category;
     private Long timeMillis;

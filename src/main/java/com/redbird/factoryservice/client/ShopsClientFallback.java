@@ -13,11 +13,6 @@ import java.util.List;
 public class ShopsClientFallback implements FallbackFactory<ShopsClient> {
     @Override
     public ShopsClient create(Throwable cause) {
-        return new ShopsClient() {
-            @Override
-            public GoodDTO saveGood(GoodFromFactory goodFromFactory) {
-                return null;
-            }
-        };
+        return null;
     }
 }

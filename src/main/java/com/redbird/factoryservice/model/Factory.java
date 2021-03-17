@@ -15,6 +15,6 @@ public class Factory {
 
     @Column(unique = true)
     String name;
-    @OneToMany(mappedBy = "factory", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    List<GoodInfo> GoodInfoList;
+//    @OneToMany(mappedBy = "factory", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    List<GoodInfo> GoodInfoList;
 }

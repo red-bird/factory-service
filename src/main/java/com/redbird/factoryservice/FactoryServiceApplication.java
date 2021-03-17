@@ -10,6 +10,7 @@ import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuit
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder;
 import org.springframework.cloud.client.circuitbreaker.Customizer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
@@ -19,15 +20,16 @@ import java.util.TimeZone;
 @SpringBootApplication
 @OpenAPIDefinition
 @EnableEurekaClient
+@EnableFeignClients
 public class FactoryServiceApplication {
 
-	@Value("${spring.jpa.hibernate.jdbc.time_zone}")
-	private String timezone;
-
-	@PostConstruct
-	void init() {
-		TimeZone.setDefault(TimeZone.getTimeZone(timezone));
-	}
+//	@Value("${spring.jpa.hibernate.jdbc.time_zone}")
+//	private String timezone;
+//
+//	@PostConstruct
+//	void init() {
+//		TimeZone.setDefault(TimeZone.getTimeZone(timezone));
+//	}
 
 	@Bean
 	public Customizer<Resilience4JCircuitBreakerFactory> defaultCustomizer() {
